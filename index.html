@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Testing page</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<header>
+	    <h1 class="header-title header-titles-font">GIOCO DEI DADI</h1>
+	    <div class="subHeader"><h2 class="header-titles-font">Regole del gioco:</h2>
+<p>Il primo a lanciare deve essere il giocatore 1. Nessun giocatore può lanciare più di una volta il dado nella stessa partita. I risultati sono visibili in console.</p><br>
+<h2 class="header-titles-font">N.B.:</h2><p>Selezionando il range "100" nel giocatore 1, il max-range per la generazione del numero random per il giocatore 1 viene settato su 10, e il numero di output moltiplicato per 10. Es. il numero random generato dall'engine per il giocatore 1 è 8. 8 viene dunque moltiplicato per 10, con il risultato finale di 80. Al risultato del giocatore 2 viene aggiunto il risultato specificato nel campo numerico in basso al centro. Il numero di default è 30.</p></div>
+
+</header>
+
+    <div class="main">
+        <div id="left-buttons">
+            <div class="left-radio-buttons">
+                <input type="radio" name="left-radio" min="1" max="4" checked> d4
+                <input type="radio" name="left-radio" min="1" max="6">d6
+                <input type="radio" name="left-radio" min="1" max="8">d8
+                <input type="radio" name="left-radio" min="1" max="10">d10
+                <input type="radio" name="left-radio" min="1" max="12">d12
+                <input type="radio" name="left-radio" min="1" max="20">d20
+                <input type="radio" name="left-radio" min="1" max="100">d100
+
+            </div>
+            <button id="giocatore1">Giocatore 1</button>
+
+        </div>
+
+        <input class="central-input" type="number" name="addingNumber" value="30">
+
+        <div id="right-buttons">
+            <div class="right-radio-buttons">
+                <input type="radio" name="right-radio" min="1" max="4" checked> d4
+                <input type="radio" name="right-radio" min="1" max="6">d6
+                <input type="radio" name="right-radio" min="1" max="8">d8
+                <input type="radio" name="right-radio" min="1" max="10">d10
+                <input type="radio" name="right-radio" min="1" max="12">d12
+                <input type="radio" name="right-radio" min="1" max="20">d20
+                <input type="radio" name="right-radio" min="1" max="100">d100
+
+            </div>
+
+            <button id="giocatore2">Giocatore 2</button>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="dice">
+            <div class="side front">
+                <div id="diceNumberAdded" class="dot center"></div>
+            </div>
+            <div class="side front inner"></div>
+            <div class="side top">
+                <div class="dot dtop dleft"></div>
+                <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side top inner"></div>
+            <div class="side right">
+                <div class="dot dtop dleft"></div>
+                <div class="dot center"></div>
+                <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side right inner"></div>
+            <div class="side left">
+                <div class="dot dtop dleft"></div>
+                <div class="dot dtop dright"></div>
+                <div class="dot dbottom dleft"></div>
+                <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side left inner"></div>
+            <div class="side bottom">
+                <div class="dot center"></div>
+                <div class="dot dtop dleft"></div>
+                <div class="dot dtop dright"></div>
+                <div class="dot dbottom dleft"></div>
+                <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side bottom inner"></div>
+            <div class="side back">
+                <div class="dot dtop dleft"></div>
+                <div class="dot dtop dright"></div>
+                <div class="dot dbottom dleft"></div>
+                <div class="dot dbottom dright"></div>
+                <div class="dot center dleft"></div>
+                <div class="dot center dright"></div>
+            </div>
+            <div class="side back inner"></div>
+            <div class="side cover x"></div>
+            <div class="side cover y"></div>
+            <div class="side cover z"></div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
